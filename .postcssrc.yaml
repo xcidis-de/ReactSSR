@@ -2,3 +2,6 @@ parser: postcss-syntax
 map: false
 plugins:
   postcss-plugin: {}
+  postcss-import: {}
+  postcss-preset-env: {}
+  cssnano: {}
