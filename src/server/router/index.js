@@ -4,6 +4,6 @@ import renderer from '../renderers/index.render.js'
 const router = Router()
 
 // Home
-router.use('/', renderer)
+router.use('^/$', renderer)
 
 export default router

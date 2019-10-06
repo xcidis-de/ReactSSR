@@ -3,9 +3,8 @@ import ReactDOM from "react-dom"
 import {Switch,Route} from "react-router-dom"
 import {createBrowserHistory} from 'history'
 import {Router} from "react-router"
-import Albums from "./components/Album"
-import './styles.scss';
-
+import Home from './components/Home'
+import './styles.scss'
 const history = createBrowserHistory()
 
 class App extends React.Component {
@@ -16,7 +15,7 @@ class App extends React.Component {
           <Route
             exact 
             path="/" 
-            component={Albums} 
+            component={Home} 
           />
         </Switch>
       </Router>
@@ -24,8 +23,8 @@ class App extends React.Component {
   }
 }
 
-if (!document.getElementById("root").childNodes.length) {
-  ReactDOM.render(<App />, document.getElementById("root"))
+if (!document.getElementById("home").childNodes.length) {
+  ReactDOM.render(<App />, document.getElementById("home"))
 } else {
-  ReactDOM.hydrate(<App />, document.getElementById("root"))
+  ReactDOM.hydrate(<App />, document.getElementById("home"))
 }

@@ -1,10 +1,10 @@
 import {Component} from 'react'
-import app from './styles.css'
+import React from 'react'
+import '../styles.scss'
 
-
-export default class App extends Component {
-    constructor() {
-
+export default class check extends Component {
+    constructor(props) {
+        super(props)
     }
 
     render() {

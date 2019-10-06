@@ -44,8 +44,8 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].css',
-            chunkFilename: '[id].css',
+            filename: 'public/[id].css',
+            chunkFilename: '[id].css'            
         }),
         new HtmlWebPackPlugin({
           filename: path.resolve('./dist/public/index.html'),

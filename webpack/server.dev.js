@@ -6,7 +6,8 @@ module.exports = {
     entry: path.resolve('./src/server/index.js'),
     output: {
         path: path.resolve('./dist'),
-        filename: '[name].node.js'
+        filename: '[name].node.js',
+        libraryTarget: 'commonjs2'
     },
     target: 'node',
     resolve: {
@@ -20,6 +21,10 @@ module.exports = {
             options: {
                 presets: ['@babel/preset-env', '@babel/preset-react']
             }
+          },
+          {
+            test: /\.s?css$/,
+            use: ['isomorphic-style-loader', { loader: 'postcss-loader' }]
           }] 
     }, 
     externals: [nodeExternals({

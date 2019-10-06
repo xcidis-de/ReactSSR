@@ -1,13 +1,14 @@
 import path from 'path'
 import fs from 'fs'
-import App from '../../client/App'
-
+import React from 'react'
+import ReactDOMServer from 'react-dom/server'
+import Home from '../../client/components/Home'
 
 export default async (req, res) => {
     try {
-        const indexPath = path.resolve('./public/index.html');
+        const indexPath = path.resolve('./dist/public/index.html');
         const indexHtml = await fs.readFileSync(indexPath, {encoding: 'utf8'})
-        const render = ReactDOMServer.renderToString(<App />)
+        const render = ReactDOMServer.renderToString(<Home />)
         return res.send(
             indexHtml.replace(
                 `<div id="home">__HOME__</div>`,
