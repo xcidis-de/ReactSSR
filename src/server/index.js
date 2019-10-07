@@ -8,7 +8,7 @@ const host = process.env.host
 
 app.use(myCors)
 app.use(jsonParser)
-app.use(staticFiles)
+app.use('/static', staticFiles)
 app.use(urlEncoded)
 app.use(router)
 

@@ -29,7 +29,9 @@ module.exports = {
     }, 
     externals: [nodeExternals({
         whitelist: []
-    })],
+    }),
+    'react-helmet'
+    ],
     plugins: [
         new DotEnv({ path: './.env' })
     ]

@@ -6,10 +6,10 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const fs = require('fs')
 
 module.exports = {
-    entry: "./src/client/index.jsx",
+    entry: "./src/client/index.js",
     output: {
         filename: 'bundle.js',
-        path: path.resolve('./dist/public')
+        path: path.resolve('./dist/static')
     },
     target: 'web',
     module: {
@@ -44,12 +44,12 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'public/[id].css',
+            filename: 'static/[id].css',
             chunkFilename: '[id].css'            
         }),
         new HtmlWebPackPlugin({
-          filename: path.resolve('./dist/public/index.html'),
-          inject: true,
+          filename: path.resolve('./dist/static/index.html'),
+          inject: false,
           template: path.resolve('./src/client/index.html')
         })
     ],

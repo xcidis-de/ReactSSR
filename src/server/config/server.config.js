@@ -8,4 +8,4 @@ export const myCors = cors()
 
 export const urlEncoded = express.urlencoded({extended: true})
 
-export const staticFiles = express.static(path.resolve('./dist/public'))
+export const staticFiles = express.static(path.resolve('./dist/static'))

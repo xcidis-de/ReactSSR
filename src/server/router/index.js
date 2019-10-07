@@ -1,9 +1,9 @@
 import {Router} from 'express'
-import renderer from '../renderers/index.render.js'
+import App from '../renderers/App.render.js'
 
 const router = Router()
 
 // Home
-router.use('^/$', renderer)
+router.use('^/$', App)
 
 export default router

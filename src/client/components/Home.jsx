@@ -9,7 +9,7 @@ export default class check extends Component {
 
     render() {
         return (
-            <div>
+            <div>  
                 <p>okfasdddddddddddddddddddddddddddd</p>
             </div>
         )
